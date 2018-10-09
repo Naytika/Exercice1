@@ -10,8 +10,20 @@ import UIKit
 
 class EcranB: UIViewController {
 
+    @IBOutlet weak var destinationLabel: UITextField!
+    
+   
+    var texteEcranB: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let ecranB = texteEcranB {
+            destinationLabel.text = ecranB
+        } else {
+            
+            print("rien de passé")
+            destinationLabel.text = "rien de passé"
+        }
 
      
     }
